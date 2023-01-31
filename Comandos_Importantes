@@ -2,3 +2,20 @@
 2- npx sequelize-cli db:migrate //Migra o esquema para o banco de dados.
 3- npx sequelize-cli seed:generate --name (seed Name) //Cria uma seed para o banco.
 4- npx sequelize-cli db:seed:all //Envia todas as seed para o banco (migration).
+
+
+
+
+try {
+            const allPeople = await database.Pessoas.findAll();
+            return res.status(200).json(allPeople);
+
+        } catch(error) {
+            return res.status(500).json(error.menssage)
+        }
+
+
+
+const allPeople = await database.Pessoas.findAll((err) => {
+            return err ? res.status(200).json(allPeople) : res.status(500).json(err.message);
+        })};
