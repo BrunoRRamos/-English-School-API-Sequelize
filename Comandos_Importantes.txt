@@ -2,3 +2,4 @@
 2- npx sequelize-cli db:migrate //Migra o esquema para o banco de dados.
 3- npx sequelize-cli seed:generate --name (seed Name) //Cria uma seed para o banco.
 4- npx sequelize-cli db:seed:all //Envia todas as seed para o banco (migration).
+5- .findOne({where: {colun: value}}) = .findById(id)
