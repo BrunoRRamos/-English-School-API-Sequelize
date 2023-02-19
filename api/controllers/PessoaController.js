@@ -56,7 +56,7 @@ class PessoasController {
 
         try {
             await database.Pessoas.destroy({ where : { id: id }});
-            return res.status(200).json({ Message: `Registro de ID:${id} deletado !`})
+            return res.status(200).json({ Message: `Registro de ID:${id} deletado !`});
 
         } catch (error) {
             return res.status(500).json(error.menssage);
