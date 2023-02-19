@@ -3,3 +3,4 @@
 3- npx sequelize-cli seed:generate --name (seed Name) //Cria uma seed para o banco.
 4- npx sequelize-cli db:seed:all //Envia todas as seed para o banco (migration).
 5- .findOne({where: {colun: value}}) = .findById(id)
+6- Crie as tabelas em ordem de dependência, assim as migrações sao realizadas na ordem certa.

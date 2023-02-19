@@ -5,6 +5,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Niveis.associate = function(models) {
     // associations can be defined here
+    Niveis.hasMany(models.Matriculas, {
+      foreignKey: 'nivel_id'
+    })
+    
   };
   return Niveis;
 };

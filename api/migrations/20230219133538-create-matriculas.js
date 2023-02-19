@@ -11,6 +11,18 @@ module.exports = {
       status: {
         type: Sequelize.STRING
       },
+      //Chave estrangeira
+      estudante_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Pessoas', key: 'id' }
+      },
+      //Chave estrangeira
+      turma_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Turmas', key: 'id' }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
