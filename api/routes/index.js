@@ -5,8 +5,11 @@ const niveisRoute = require('./niveisRoute')
 
 //Cria uma rota base
 module.exports = app => {
-    app.use(bodyParser.json());
-    app.use(pessoasRoute);
-    app.use(turmasRoute);
-    app.use(niveisRoute);
+    app.use(
+        bodyParser.json(),
+        bodyParser.urlencoded({ extended: false}),
+        pessoasRoute,
+        turmasRoute,
+        niveisRoute,
+    );
 }
