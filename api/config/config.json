@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Selmamaria31",
-    "database": "escola_ingles",
-    "host": "127.0.0.1",
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
     "dialect": "mysql",
     "operatorsAliases": false
   },
