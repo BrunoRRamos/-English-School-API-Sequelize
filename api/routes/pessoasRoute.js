@@ -9,10 +9,7 @@ router
     .post('/pessoas', PessoasController.createPessoa)
     .put('/pessoas/:id', PessoasController.updatePessoa)
     .delete('/pessoas/:id', PessoasController.deletePessoa)
-<<<<<<< Updated upstream
     .get('/pessoas/:estudanteId/matricula/:matriculaId', PessoasController.pegaUmaMatricula)
-=======
-    .get('/pessoas/:estudanteId/matricula/:matriculaId', PessoasController.getMatriculaById)
->>>>>>> Stashed changes
+
 
 module.exports = router;

@@ -64,7 +64,6 @@ class PessoasController {
         }
     }
 
-<<<<<<< Updated upstream
     static async pegaUmaMatricula(req, res) {
         const { estudanteId, matriculaId } = req.params;
 
@@ -82,21 +81,6 @@ class PessoasController {
             return res.status(500).json(error.menssage);
         }
       }
-=======
-    //http://localhost:3000/pesssoas/:estudanteId/matricula/:matriculaId
-    static async getMatriculaById (req, res) {
-        const { estudanteId, matriculaId } = req.params;
-
-        const umaMatricula = await database.Matriculas.findOne({
-            where: { 
-               id: Number(matriculaId),
-               estudante_id: Number(estudanteId)
-               } 
-           });
-       return res.status(200).json(umaMatricula);
-    }
-
->>>>>>> Stashed changes
 }
 
 module.exports = PessoasController;
