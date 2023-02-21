@@ -1,4 +1,5 @@
 const { json } = require('body-parser');
+
 const database = require('../models');
 
 class PessoasController {
@@ -62,6 +63,40 @@ class PessoasController {
             return res.status(500).json(error.menssage);
         }
     }
+
+<<<<<<< Updated upstream
+    static async pegaUmaMatricula(req, res) {
+        const { estudanteId, matriculaId } = req.params;
+
+        try {
+            const umaMatricula = await database.Matriculas.findOne( {
+                where: {
+                  id: matriculaId,
+                  estudante_id: estudanteId
+                },
+                attributes: ['id', 'status', 'createdAt', 'updatedAt', 'estudante_id', 'turma_id']
+              });
+            return res.status(200).json(umaMatricula)
+
+        } catch (error) {
+            return res.status(500).json(error.menssage);
+        }
+      }
+=======
+    //http://localhost:3000/pesssoas/:estudanteId/matricula/:matriculaId
+    static async getMatriculaById (req, res) {
+        const { estudanteId, matriculaId } = req.params;
+
+        const umaMatricula = await database.Matriculas.findOne({
+            where: { 
+               id: Number(matriculaId),
+               estudante_id: Number(estudanteId)
+               } 
+           });
+       return res.status(200).json(umaMatricula);
+    }
+
+>>>>>>> Stashed changes
 }
 
 module.exports = PessoasController;

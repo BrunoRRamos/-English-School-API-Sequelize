@@ -10,6 +10,6 @@ module.exports = app => {
         bodyParser.urlencoded({ extended: false}),
         pessoasRoute,
         turmasRoute,
-        niveisRoute,
+        niveisRoute
     );
 }
